@@ -3,16 +3,16 @@ import PropTypes from "prop-types";
 
 import "./Display.css";
 
-export default class Display extends React.Component {
-  static propTypes = {
-    value: PropTypes.string,
-  };
+const Display = (props) => {
+  return (
+    <div className="component-display">
+      <div>{props.value}</div>
+    </div>
+  );
+};
 
-  render() {
-    return (
-      <div className="component-display">
-        <div>{this.props.value}</div>
-      </div>
-    );
-  }
-}
+Display.propTypes = {
+  value: PropTypes.string,
+};
+
+export default Display;
